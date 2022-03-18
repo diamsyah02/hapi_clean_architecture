@@ -2,7 +2,6 @@
 
 const RouteV1 = require('../app/v1/routes')
 const res = require('../helpers/WebResponse')
-require('dotenv').config()
 
 const routes = async (server) => {
   await server.route({
