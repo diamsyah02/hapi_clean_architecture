@@ -1,0 +1,20 @@
+{
+  "name": "hapi_clean_architecture",
+  "version": "1.0.0",
+  "description": "Clean Architecture For HapiJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diamsyah M Dida",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/jwt": "^2.1.0",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.11",
+    "mysql": "^2.18.1"
+  }
+}
