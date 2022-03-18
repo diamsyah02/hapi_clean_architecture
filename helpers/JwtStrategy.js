@@ -18,17 +18,21 @@ const JwtStrategy = (server) => {
     },
     validate: async (artifacts) => {
       const result = await repoAuth.checkUsername(artifacts.decoded.payload.username)
-      if(result.length > 0) {
-        return {
-          isValid: true,
-          credentials: {
-            username: artifacts.decoded.payload.username,
+      if(result == undefined)  {
+        console.log(`Opss.. something's wrong with your database`)
+      } else {
+        if(result.length > 0) {
+          return {
+            isValid: true,
+            credentials: {
+              username: artifacts.decoded.payload.username,
+            }
           }
         }
-      }
-      return {
-        isValid: false,
-        credentials: {}
+        return {
+          isValid: false,
+          credentials: {}
+        }
       }
     }
   })

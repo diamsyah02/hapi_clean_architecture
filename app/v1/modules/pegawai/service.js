@@ -1,29 +1,70 @@
 "use strict"
+
 const response = require('../../../../helpers/WebResponse')
 const repo = require('./repository')
 
 const fetchAll = async () => {
   const data = await repo.fetchAll()
-  return response(200, 'Get data pegawai successfully', data)
+  if(data == undefined) {
+    return response(500, `Opss.. something's wrong with your database`, [])
+  } else {
+    if(typeof data === 'object') {
+      return response(200, 'Get data pegawai successfully', data)
+    } else  {
+      return response(500, data, [])
+    }
+  }
 }
 const fetchDetail = async (request) => {
   const data = await repo.fetchDetail(request)
-  return response(200, `Get data pegawai with id = ${request.params.id} successfully`, data[0])
+  if(data == undefined) {
+    return response(500, `Opss.. something's wrong with your database`, [])
+  } else {
+    if(typeof data === 'object') {
+      return response(200, `Get data pegawai with id = ${request.params.id} successfully`, data[0])
+    } else  {
+      return response(500, data, [])
+    }
+  }
 }
 
 const store = async (request) => {
   const data = await repo.store(request)
-  return response(200, 'Insert data pegawai successfully', data)
+  if(data == undefined) {
+    return response(500, `Opss.. something's wrong with your database`, [])
+  } else {
+    if(typeof data === 'object') {
+      return response(200, 'Insert data pegawai successfully', data)
+    } else  {
+      return response(500, data, [])
+    }
+  }
 }
 
 const update = async (request) => {
   const data = await repo.update(request)
-  return response(200, `Update data pegawai with id = ${request.params.id}`, data)
+  if(data == undefined) {
+    return response(500, `Opss.. something's wrong with your database`, [])
+  } else {
+    if(typeof data === 'object') {
+      return response(200, `Update data pegawai with id = ${request.params.id}`, data)
+    } else  {
+      return response(500, data, [])
+    }
+  }
 }
 
 const remove = async (request) => {
   const data = await repo.remove(request)
-  return response(200, `Delete data pegawai with id = ${request.params.id}`, data)
+  if(data == undefined) {
+    return response(500, `Opss.. something's wrong with your database`, [])
+  } else {
+    if(typeof data === 'object') {
+      return response(200, `Delete data pegawai with id = ${request.params.id}`, data)
+    } else  {
+      return response(500, data, [])
+    }
+  }
 }
 
 module.exports = {
