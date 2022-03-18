@@ -1,6 +1,6 @@
 # hapi_clean_architecture
  Clean Architecture For Hapi JS
-#Package
+# Package
  - @hapi/hapi V20.2.1
  - @hapi/jwt V2.1.0
  - bcrypt V5.0.1
