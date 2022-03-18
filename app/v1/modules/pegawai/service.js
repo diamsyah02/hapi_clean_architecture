@@ -30,6 +30,7 @@ const fetchDetail = async (request) => {
 
 const store = async (request) => {
   const data = await repo.store(request)
+  console.log(data)
   if(data == undefined) {
     return response(500, `Opss.. something's wrong with your database`, [])
   } else {
@@ -46,10 +47,10 @@ const update = async (request) => {
   if(data == undefined) {
     return response(500, `Opss.. something's wrong with your database`, [])
   } else {
-    if(typeof data === 'object') {
-      return response(200, `Update data pegawai with id = ${request.params.id}`, data)
-    } else  {
+    if(typeof data === 'string') {
       return response(500, data, [])
+    } else  {
+      return response(200, `Update data pegawai with id = ${request.params.id}`, data)
     }
   }
 }
@@ -59,10 +60,10 @@ const remove = async (request) => {
   if(data == undefined) {
     return response(500, `Opss.. something's wrong with your database`, [])
   } else {
-    if(typeof data === 'object') {
-      return response(200, `Delete data pegawai with id = ${request.params.id}`, data)
-    } else  {
+    if(typeof data === 'string') {
       return response(500, data, [])
+    } else  {
+      return response(200, `Delete data pegawai with id = ${request.params.id}`, data)
     }
   }
 }
