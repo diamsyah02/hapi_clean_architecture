@@ -8,6 +8,7 @@
  - jsonwebtoken V8.5.1
  - knex V0.95.11
  - mysql V2.18.1
+ - jest V27.5.1
 # Alur routes
  - index.js (folder root project)
  - index.js (folder routes)

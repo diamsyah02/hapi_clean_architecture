@@ -11,7 +11,7 @@ const register = async (request) => {
   if(check == undefined) {
     return response(500, `Opss.. something's wrong with your database`, [])
   } else {
-    if(typeof data === 'object') {
+    if(typeof check === 'object') {
       if(check.length == 0) {
         const data = await repo.register(request)
         return response(200, 'Register successfully', {userID: data[0]})

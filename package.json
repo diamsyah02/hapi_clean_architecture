@@ -4,7 +4,7 @@
   "description": "Clean Architecture For HapiJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Diamsyah M Dida",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "@hapi/jwt": "^2.1.0",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.11",
     "mysql": "^2.18.1"

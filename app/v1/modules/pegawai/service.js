@@ -30,7 +30,6 @@ const fetchDetail = async (request) => {
 
 const store = async (request) => {
   const data = await repo.store(request)
-  console.log(data)
   if(data == undefined) {
     return response(500, `Opss.. something's wrong with your database`, [])
   } else {
