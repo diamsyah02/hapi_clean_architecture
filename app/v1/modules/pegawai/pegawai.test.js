@@ -1,7 +1,7 @@
 "use strict"
 
 const { fetchAll, fetchDetail, store, update, remove } = require('./controller')
-const db = require('../../../../configs/connectionDB')
+const db = require('@configs/connectionDB')
 
 describe('Test Auth Pegawai', function () {
   test('Function FetchAll', async () => {

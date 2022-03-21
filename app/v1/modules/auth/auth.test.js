@@ -1,7 +1,7 @@
 "use strict"
 
 const { register, login } = require('./controller')
-const db = require('../../../../configs/connectionDB')
+const db = require('@configs/connectionDB')
 
 describe('Test Auth Controller', function () {
   test('Function Register', async () => {
