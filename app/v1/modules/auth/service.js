@@ -1,6 +1,6 @@
 "use strict"
 
-const response = require('../../../../helpers/WebResponse')
+const response = require('@helpers/WebResponse')
 const repo = require('./repository')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')

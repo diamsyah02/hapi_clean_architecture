@@ -1,7 +1,8 @@
 "use strict"
 
-const RouteV1 = require('../app/v1/routes')
-const res = require('../helpers/WebResponse')
+require('module-alias/register')
+const RouteV1 = require('@v1/routes')
+const res = require('@helpers/WebResponse')
 
 const routes = async (server) => {
   await server.route({

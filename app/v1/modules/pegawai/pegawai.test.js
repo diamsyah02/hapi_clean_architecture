@@ -1,3 +1,5 @@
+"use strict"
+
 const { fetchAll, fetchDetail, store, update, remove } = require('./controller')
 const db = require('../../../../configs/connectionDB')
 

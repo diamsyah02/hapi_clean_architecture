@@ -1,7 +1,7 @@
 "use strict"
 
 const bcrypt = require('bcrypt')
-const db = require('../../../../configs/connectionDB')
+const db = require('@configs/connectionDB')
 const table = 'users'
 
 const register = async (request) => {

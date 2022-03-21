@@ -1,6 +1,6 @@
 "use strict"
 
-const db = require('../../../../configs/connectionDB')
+const db = require('@configs/connectionDB')
 const table = 'pegawai'
 
 const fetchAll = async () => {

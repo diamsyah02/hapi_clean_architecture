@@ -16,6 +16,12 @@
     "jest": "^27.5.1",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.95.11",
+    "module-alias": "^2.2.2",
     "mysql": "^2.18.1"
+  },
+  "_moduleAliases": {
+    "@helpers/*" : "helpers/",
+    "@configs/*" : "configs/",
+    "@v1/*"  : "app/v1/"
   }
 }

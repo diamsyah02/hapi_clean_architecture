@@ -1,3 +1,5 @@
+"use strict"
+
 const { register, login } = require('./controller')
 const db = require('../../../../configs/connectionDB')
 

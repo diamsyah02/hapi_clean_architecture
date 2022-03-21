@@ -1,9 +1,11 @@
 "use strict"
 
+require('module-alias/register')
+require('./pathAlias')
 const Hapi = require('@hapi/hapi')
 const hapiJwt = require('@hapi/jwt');
 const routes = require('./routes')
-const JwtStrategy = require('./helpers/JwtStrategy');
+const JwtStrategy = require('@helpers/JwtStrategy');
 require('dotenv').config()
 
 const init = async () => {
