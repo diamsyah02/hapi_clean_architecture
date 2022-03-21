@@ -9,6 +9,7 @@
  - knex V0.95.11
  - mysql V2.18.1
  - jest V27.5.1
+ - module-alias V2.2.2
 # Alur routes
  - index.js (folder root project)
  - index.js (folder routes)
